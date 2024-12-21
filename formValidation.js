@@ -2,8 +2,8 @@
 const form = document.querySelector('form');
 const nameInput = document.querySelector('#name');
 const subjectSelect = document.querySelector('#subject');
-
 const submitButton = document.querySelector('#submitButton');
+
 // Create error message elements
 const nameError = document.createElement('p');
 nameError.style.color = 'red';
@@ -23,6 +23,7 @@ subjectSelect.insertAdjacentElement('afterend', subjectError);
 
 // Add an event listener for form submission
 form.addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default submission
     let isValid = true;
 
     // Validate name input
@@ -45,11 +46,39 @@ form.addEventListener('submit', function (event) {
         subjectError.style.display = 'none';
     }
 
-    // Prevent form submission if validation fails
-    if (!isValid) {
-        event.preventDefault();
-    }
-    else{
-        window.location.href = 'questions.html';
+    // If valid, navigate to questions page with selected subject
+    if (isValid) {
+        const selectedSubject = subjectSelect.value;
+        window.location.href = `questions.html?subject=${selectedSubject}`;
     }
 });
+
+// Script for the `questions.html` page
+if (window.location.pathname.includes('questions.html')) {
+    // Define available sections with their corresponding IDs
+    const sections = [
+        'intro-python',
+        'data-types',
+        'control-flow',
+        'functions-modules',
+        'oop',
+        'file-handling',
+        'error-handling'
+    ];
+
+    // Get the selected subject from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedSubject = urlParams.get('subject');
+
+    // Show only the selected section, hide others
+    sections.forEach(sectionId => {
+        const sectionElement = document.getElementById(sectionId);
+        if (sectionElement) {
+            if (sectionId === selectedSubject) {
+                sectionElement.style.display = 'block'; // Show selected section
+            } else {
+                sectionElement.style.display = 'none'; // Hide others
+            }
+        }
+    });
+}

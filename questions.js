@@ -1,7 +1,7 @@
 // Define the correct answers
 const correctAnswers = {
     q1: 'a',
-    q2: 'b',
+    q2: 'c',
     q3: 'a',
     q4: 'c',
     q5: 'a',
@@ -9,7 +9,17 @@ const correctAnswers = {
     q7: 'b',
     q8: 'a',
     q9: 'c',
-    q10: 'c'
+    q10: 'c',
+    q11:'a',
+    q12:'b',
+    q13:'b',
+    q14:'b',
+    q15:'a',
+    q16:'a',
+    q17:'c',
+    q18:'c',
+    q19:'b',
+    q20:'c',
 };
 
 // Attach event listener to the form
