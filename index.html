@@ -3,223 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اساسيات البرمجة بلغة بايثون</title>
+    <title>تعلم اليوم - منصة التعليم الحديثة</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="/kisspng-python-computer-icons-programming-language-executa-1713885634631.webp"  type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <h1>امتحان اساسيات بايثون</h1>
-        <form id="quiz-form">
-            <!-- أسئلة عن كيف يعمل الحاسوب -->
-            <div class="question">
-                <p>1. كيف يقوم الحاسوب بمعالجة البيانات؟</p>
-                <label><input type="radio" name="q1" value="a"> باستخدام لغة البشر مباشرة.</label><br>
-                <label><input type="radio" name="q1" value="b"> عن طريق تحويل البيانات إلى لغة الآلة (binary).</label><br>
-                <label><input type="radio" name="q1" value="c"> الحاسوب لا يحتاج إلى معالجة البيانات.</label><br>
-                <label><input type="radio" name="q1" value="d"> باستخدام التطبيقات فقط.</label>
-            </div>
-            <div class="question">
-                <p>2. ما هو العنصر الرئيسي الذي ينفذ العمليات داخل الحاسوب؟</p>
-                <label><input type="radio" name="q2" value="a"> ذاكرة الوصول العشوائي (RAM).</label><br>
-                <label><input type="radio" name="q2" value="b"> وحدة المعالجة المركزية (CPU).</label><br>
-                <label><input type="radio" name="q2" value="c"> القرص الصلب (Hard Disk).</label><br>
-                <label><input type="radio" name="q2" value="d"> وحدة الإدخال (Input Unit).</label>
-            </div>
-
-            <!-- أسئلة عن لماذا نتعلم بايثون -->
-            <div class="question">
-                <p>3. لماذا تعتبر لغة بايثون لغة مناسبة للمبتدئين؟</p>
-                <label><input type="radio" name="q3" value="a"> بسبب صعوبة تركيب الجمل البرمجية فيها.</label><br>
-                <label><input type="radio" name="q3" value="b"> لأنها تحتوي على الكثير من الرموز المعقدة.</label><br>
-                <label><input type="radio" name="q3" value="c"> لأنها بسيطة وسهلة القراءة والفهم.</label><br>
-                <label><input type="radio" name="q3" value="d"> لأنها لا تحتاج إلى مفسر (Interpreter).</label>
-            </div>
-            <div class="question">
-                <p>4. ما هو أحد الاستخدامات الشائعة للغة بايثون؟</p>
-                <label><input type="radio" name="q4" value="a"> تطوير أنظمة التشغيل.</label><br>
-                <label><input type="radio" name="q4" value="b"> تحليل البيانات والذكاء الاصطناعي.</label><br>
-                <label><input type="radio" name="q4" value="c"> إنشاء الألعاب ثلاثية الأبعاد فقط.</label><br>
-                <label><input type="radio" name="q4" value="d"> لاستخدامها كلغة تجميع (Assembly).</label>
-            </div>
-
-            <!-- أسئلة عن التسميات الصحيحة للمتغيرات -->
-            <div class="question">
-                <p>5. أي من التسميات التالية صحيح كمتغير في Python؟</p>
-                <label><input type="radio" name="q5" value="a"> 123name</label><br>
-                <label><input type="radio" name="q5" value="b"> _variable_name</label><br>
-                <label><input type="radio" name="q5" value="c"> @name</label><br>
-                <label><input type="radio" name="q5" value="d"> if</label>
-            </div>
-            <div class="question">
-                <p>6. ما هي القاعدة التي يجب اتباعها عند تسمية المتغيرات في Python؟</p>
-                <label><input type="radio" name="q6" value="a"> يمكن أن يبدأ المتغير برقم.</label><br>
-                <label><input type="radio" name="q6" value="b"> يمكن أن يحتوي على أحرف وأرقام وعلامة "_" فقط.</label><br>
-                <label><input type="radio" name="q6" value="c"> يجب أن يحتوي على رموز خاصة.</label><br>
-                <label><input type="radio" name="q6" value="d"> يجب أن يبدأ بـ "@".</label>
-            </div>
-
-            <!-- أسئلة عن أنواع الأخطاء وتفسيرها -->
-            <div class="question">
-                <p>7. ما هو الخطأ الناتج عن الكود التالي؟</p>
-                <code>print("Hello World)</code>
-                <label><input type="radio" name="q7" value="a"> SyntaxError</label><br>
-                <label><input type="radio" name="q7" value="b"> TypeError</label><br>
-                <label><input type="radio" name="q7" value="c"> NameError</label><br>
-                <label><input type="radio" name="q7" value="d"> لا خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>8. ما هو سبب خطأ NameError؟</p>
-                <label><input type="radio" name="q8" value="a"> استخدام متغير غير معرّف.</label><br>
-                <label><input type="radio" name="q8" value="b"> خطأ في الجملة البرمجية.</label><br>
-                <label><input type="radio" name="q8" value="c"> استخدام نوع بيانات خاطئ.</label><br>
-                <label><input type="radio" name="q8" value="d"> كتابة الدالة بدون أقواس.</label>
-            </div>
-
-            <!-- أسئلة عن أنواع البيانات -->
-            <div class="question">
-                <p>9. ما هو نوع البيانات الناتج عن التعبير التالي؟</p>
-                <code>x = 5.0</code>
-                <label><input type="radio" name="q9" value="a"> int</label><br>
-                <label><input type="radio" name="q9" value="b"> float</label><br>
-                <label><input type="radio" name="q9" value="c"> str</label><br>
-                <label><input type="radio" name="q9" value="d"> bool</label>
-            </div>
-            <div class="question">
-                <p>10. ما هو ناتج الكود التالي؟</p>
-                <code>x = 10<br>y = 3<br>print(x // y)</code>
-                <label><input type="radio" name="q10" value="a"> 3.33</label><br>
-                <label><input type="radio" name="q10" value="b"> 3</label><br>
-                <label><input type="radio" name="q10" value="c"> 4</label><br>
-                <label><input type="radio" name="q10" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>11. ما ناتج الكود التالي؟</p>
-                <code>
-                    x = 15 % 4<br>
-                    print(x)
-                </code>
-                <label><input type="radio" name="q11" value="a"> 3</label><br>
-                <label><input type="radio" name="q11" value="b"> 1</label><br>
-                <label><input type="radio" name="q11" value="c"> 4</label><br>
-                <label><input type="radio" name="q11" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>12. ما النتيجة النهائية للكود التالي؟</p>
-                <code>
-                    x = 2 ** 3<br>
-                    print(x)
-                </code>
-                <label><input type="radio" name="q12" value="a"> 6</label><br>
-                <label><input type="radio" name="q12" value="b"> 8</label><br>
-                <label><input type="radio" name="q12" value="c"> 9</label><br>
-                <label><input type="radio" name="q12" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>13. ما ناتج الكود التالي؟</p>
-                <code>
-                    text = "Python"<br>
-                    print(text[0])
-                </code>
-                <label><input type="radio" name="q13" value="a"> P</label><br>
-                <label><input type="radio" name="q13" value="b"> y</label><br>
-                <label><input type="radio" name="q13" value="c"> n</label><br>
-                <label><input type="radio" name="q13" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>14. ما هو طول النص الناتج عن الكود التالي؟</p>
-                <code>
-                    text = "Programming"<br>
-                    print(len(text))
-                </code>
-                <label><input type="radio" name="q14" value="a"> 10</label><br>
-                <label><input type="radio" name="q14" value="b"> 11</label><br>
-                <label><input type="radio" name="q14" value="c"> 12</label><br>
-                <label><input type="radio" name="q14" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>15. هل الكود التالي سيطبع "Greater"؟</p>
-                <code>
-                    x = 5<br>
-                    if x > 3:<br>
-                        print("Greater")<br>
-                    else:<br>
-                        print("Smaller")
-                </code>
-                <label><input type="radio" name="q15" value="a"> True</label><br>
-                <label><input type="radio" name="q15" value="b"> False</label>
-            </div>
-            <div class="question">
-                <p>16. ما النتيجة النهائية للكود التالي؟</p>
-                <code>
-                    x = 5<br>
-                    if x > 3:<br>
-                        print("Greater")<br>
-                    else:<br>
-                        print("Smaller")
-                </code>
-                <label><input type="radio" name="q16" value="a"> Greater</label><br>
-                <label><input type="radio" name="q16" value="b"> Smaller</label><br>
-                <label><input type="radio" name="q16" value="c"> خطأ في الكود.</label><br>
-                <label><input type="radio" name="q16" value="d"> None</label>
-            </div>
-            <div class="question">
-                <p>17. ما نوع الخطأ الناتج عن الكود التالي؟</p>
-                <code>
-                    x = "10"<br>
-                    y = 5<br>
-                    print(x + y)
-                </code>
-                <label><input type="radio" name="q17" value="a"> TypeError</label><br>
-                <label><input type="radio" name="q17" value="b"> ValueError</label><br>
-                <label><input type="radio" name="q17" value="c"> SyntaxError</label><br>
-                <label><input type="radio" name="q17" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>18. ما الذي يسبب خطأ IndentationError؟</p>
-                <label><input type="radio" name="q18" value="a"> استخدام مسافات غير صحيحة في الكود.</label><br>
-                <label><input type="radio" name="q18" value="b"> استخدام متغير غير معرّف.</label><br>
-                <label><input type="radio" name="q18" value="c"> كتابة الكود بدون أقواس.</label><br>
-                <label><input type="radio" name="q18" value="d"> تقسيم عدد على صفر.</label>
-            </div>
-            <div class="question">
-                <p>19. ما النتيجة النهائية للكود التالي؟</p>
-                <code>
-                    x = [1, 2, 3]<br>
-                    print(len(x))
-                </code>
-                <label><input type="radio" name="q19" value="a"> 2</label><br>
-                <label><input type="radio" name="q19" value="b"> 3</label><br>
-                <label><input type="radio" name="q19" value="c"> 4</label><br>
-                <label><input type="radio" name="q19" value="d"> خطأ في الكود.</label>
-            </div>
-            <div class="question">
-                <p>20. هل سيؤدي الكود التالي إلى خطأ؟</p>
-                <code>
-                    x = "Hello"<br>
-                    y = 5<br>
-                    print(x + y)
-                </code>
-                <label><input type="radio" name="q20" value="a"> True</label><br>
-                <label><input type="radio" name="q20" value="b"> False</label>
-            </div>
-                                                            
-
-            <!-- باقي الأسئلة تتبع نفس الطريقة حتى الوصول إلى 20 سؤالاً -->
-
-            <button type="button" id="submit-btn">عرض النتيجة</button>
-        </form>
-        <div id="result" class="hidden">
-            <h2>نتيجتك:</h2>
-            <p id="score"></p>
-            <h3>الأسئلة التي أجبت عليها بشكل خاطئ:</h3>
-            <ul id="wrong-answers"></ul>
-
-            <!-- زر إعادة الاختبار بعد عرض النتيجة -->
-            <button id="reset-btn" class="hidden">إعادة الاختبار</button>
+    <header class="header">
+        <div class="container">
+            <h1>مرحبًا بك في تعلم اليوم</h1>
+            <p>منصة التعليم التي تناسب جميع الأعمار والمستويات. اكتشف شغفك وتعلم شيئًا جديدًا كل يوم!</p>
+            <a href="#courses" class="cta">استكشف الدورات</a>
         </div>
-        
-    </div>
-    <script src="script.js"></script>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>عن تعلم اليوم</h2>
+                <p>"تعلم اليوم" هو مكانك المثالي للتعلم عبر الإنترنت. نقدم مجموعة متنوعة من الدورات التفاعلية التي تتيح لك اكتساب المهارات التي تحتاجها للنجاح في حياتك الشخصية والمهنية.</p>
+                <ul>
+                    <li>دروس تفاعلية مصممة بعناية.</li>
+                    <li>محتوى مناسب لجميع المستويات.</li>
+                    <li>إمكانية الوصول من أي مكان وفي أي وقت.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="courses" class="courses">
+            <div class="container">
+                <h2>دوراتنا</h2>
+                <div class="course-list">
+                    <div class="course-item">
+                        <h3>أساسيات البرمجة</h3>
+                        <p>تعلم مفاهيم البرمجة الأساسية باستخدام لغات حديثة.</p>
+                        <a href="#" class="btn">عرض المزيد</a>
+                    </div>
+                    <div class="course-item">
+                        <h3>بايثون</h3>
+                        <p>ابدأ من الصفر برمجة.</p>
+                        <a href="python_course.html" class="btn">عرض المزيد</a>
+                    </div>
+                    
+                    <div class="course-item">
+                        <h3>تحليل البيانات</h3>
+                        <p>اكتسب مهارات تحليل البيانات واستخدامها لاتخاذ قرارات مستنيرة.</p>
+                        <a href="#" class="btn">عرض المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>ماذا يقول طلابنا؟</h2>
+                <div class="testimonial-item">
+                    <p>"تعلم اليوم غير حياتي تمامًا. كانت الدورات ممتعة ومفيدة للغاية."</p>
+                    <h4>- أحمد</h4>
+                </div>
+                <div class="testimonial-item">
+                    <p>"الدورات التفاعلية جعلت التعلم أسهل بكثير مما توقعت."</p>
+                    <h4>- سارة</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <div class="container">
+                <h2>تواصل معنا</h2>
+                <p>لأي استفسارات أو ملاحظات، لا تتردد في التواصل معنا.</p>
+                <form action="#" method="post">
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">رسالتك:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn">إرسال</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 تعلم اليوم. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+    <link rel="stylesheet" href="pythonStyle.css">
+</head>
+<body>
+    <header>
+        <h1>Questions</h1>
+        <p>Ready for questions? Go ahead, Dragon!</p>
+    </header>
+    <main>
+        <section class="questions">
+            <form action="questions.html" method="post">
+                <label for="name">Your Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" ><br><br>
+                
+                <label for="subject">Select a Subject:</label><br>
+                <select id="subject" name="subject" >
+                    <option value="">-- Choose a subject --</option>
+                    <option value="introduction">Introduction to Python</option>
+                    <option value="data-types">Data Types and Variables</option>
+                    <option value="control-flow">Control Flow: Loops and Conditional Statements</option>
+                    <option value="functions-modules">Functions and Modules</option>
+                    <option value="data-structures">Working with Data: Lists, Dictionaries, and Tuples</option>
+                    <option value="oop">Object-Oriented Programming</option>
+                    <option value="advanced-topics">Advanced Topics: File Handling, Error Handling</option>
+                    <option value="final-project">Final Project: Build a Python Application</option>
+                </select><br><br>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Mustafa Zain. All rights reserved.</p>
+    </footer>
+    <script src="formValidation.js"></script>
+</body>
+</html>
