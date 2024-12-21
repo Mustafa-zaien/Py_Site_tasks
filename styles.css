@@ -35,20 +35,26 @@ body {
     margin: 1rem 0;
 }
 
-.header .cta {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    background-color: white;
-    color: #4CAF50;
+.cta{
+    display: block; /* Center the button */
+    width: fit-content;
     text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    margin: 1.5rem auto 0 auto; /* Add spacing and center horizontally */
+    background: linear-gradient(90deg, #4682b4, #00b4db); /* Gradient effect */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    padding: 0.8rem 1.5rem; /* Add padding */
+    font-size: 1rem; /* Set font size */
+    font-weight: bold; /* Emphasize the button text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Show pointer on hover */
+    transition: background 0.3s ease, transform 0.2s ease; /* Smooth transitions */
 }
-
-.header .cta:hover {
-    background-color: #45a049;
-    color: white;
+.cta:hover{
+    
+    background: linear-gradient(90deg, #00b4db, #4682b4); /* Reverse gradient on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
 /* About section */
