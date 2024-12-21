@@ -21,6 +21,20 @@ const correctAnswers = {
     q19:'b',
     q20:'c',
 };
+// Get the user name from localStorage
+const userName = localStorage.getItem('userName');
+
+// Select the element with class "welcome"
+const welcomeElement = document.querySelector('.welcome');
+
+// Check if the userName and the welcome element exist
+if (userName && welcomeElement) {
+    welcomeElement.innerHTML = `Welcome, ${userName}!`; // Update the content
+} else if (!userName) {
+    console.error('No user name found in localStorage.');
+} else {
+    console.error('No element with class "welcome" found.');
+}
 
 // Attach event listener to the form
 document.querySelector('form').addEventListener('submit', function (event) {

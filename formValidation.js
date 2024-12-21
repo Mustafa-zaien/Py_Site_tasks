@@ -46,9 +46,15 @@ form.addEventListener('submit', function (event) {
         subjectError.style.display = 'none';
     }
 
-    // If valid, navigate to questions page with selected subject
+    // If valid, save name to localStorage and navigate to questions page with selected subject
     if (isValid) {
         const selectedSubject = subjectSelect.value;
+        const userName = nameInput.value.trim();
+
+        // Save name to localStorage
+        localStorage.setItem('userName', userName);
+
+        // Navigate to the questions page
         window.location.href = `questions.html?subject=${selectedSubject}`;
     }
 });
@@ -69,6 +75,17 @@ if (window.location.pathname.includes('questions.html')) {
     // Get the selected subject from the URL
     const urlParams = new URLSearchParams(window.location.search);
     const selectedSubject = urlParams.get('subject');
+
+    // Retrieve user name from localStorage
+    const userName = localStorage.getItem('userName');
+    if (userName) {
+        const header = document.querySelector('header');
+        const welcomeMessage = document.createElement('p');
+        welcomeMessage.style.fontSize = '1.2rem';
+        welcomeMessage.style.marginTop = '1rem';
+        welcomeMessage.textContent = `Welcome, ${userName}! Good luck with your questions.`;
+        header.appendChild(welcomeMessage);
+    }
 
     // Show only the selected section, hide others
     sections.forEach(sectionId => {
